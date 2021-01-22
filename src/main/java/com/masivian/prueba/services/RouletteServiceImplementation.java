@@ -20,8 +20,8 @@ public class RouletteServiceImplementation implements RouletteService {
 	private static final String RESULT = "/////////////// RESULTADO ///////////////\n" +
 	                "//////// EL NÚMERO GANADOR ES: %s ////////\n\n" +
 	                "/////////// LOS GANADORES SON ///////////\n\n%s";
-	private static final String NUMBER_WINNER = "  - El usuario %s apostó %s al número %s que es el GANADOR y ganó %s \n";
-	private static final String COLOR_WINNER = "  - El usuario %s apostó %s al color %s que es el GANADOR y ganó %s \n";
+	private static final String NUMBER_WINNER = "  - El usuario %s apostó %s al número %s que es el GANADOR y ganó %s\n";
+	private static final String COLOR_WINNER = "  - El usuario %s apostó %s al color %s que es el GANADOR y ganó %s\n";
 	
 	@Autowired
 	private RouletteRepository rouletteRepository;	
