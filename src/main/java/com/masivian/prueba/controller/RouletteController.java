@@ -23,33 +23,27 @@ public class RouletteController {
 
 	@PostMapping(value = "create")
 	public ResponseEntity<Long> create(@RequestBody Roulette roulette) {
-		Long idRouletteCreated = rouletteService.createRoulette(roulette);
-		return ResponseEntity.ok(idRouletteCreated);
+		return ResponseEntity.ok(rouletteService.createRoulette(roulette));
 	}
 
 	@PostMapping("openRoulette/{id}")
 	public ResponseEntity<String> openRoulette(@PathVariable("id") Long id) {
-		String stateRouleteInicied = rouletteService.openRoulette(id);
-		return ResponseEntity.ok(stateRouleteInicied);
+		return ResponseEntity.ok(rouletteService.openRoulette(id));
 	}
 
 	@PostMapping(value = "/createBet/{rouletteId}/{userId}")
 	public ResponseEntity<String> createBet(@PathVariable("rouletteId") Long rouleteId,
 			@PathVariable("userId") Long userId, @RequestBody Bet bet) {
-		String state = "";
-		state = rouletteService.crateBet(bet, userId, rouleteId);
-		return ResponseEntity.ok(state);
+		return ResponseEntity.ok(rouletteService.crateBet(bet, userId, rouleteId));
 	}
 
 	@GetMapping(value = "/closeBet/{rouletteId}")
 	public ResponseEntity<String> closeBet(@PathVariable("rouletteId") Long rouletteId) {
-		String results = rouletteService.closeBets(rouletteId);
-		return ResponseEntity.ok(results);
+		return ResponseEntity.ok(rouletteService.closeBets(rouletteId));
 	}
 	
 	@GetMapping(value = "/findAllRoulette")
 	public ResponseEntity<List <Roulette>> findAllRoulette(){
-		List <Roulette> roulette = rouletteService.findAllRoulette();
-		return ResponseEntity.ok(roulette);
+		return ResponseEntity.ok(rouletteService.findAllRoulette());
 	}
 }
