@@ -1,0 +1,12 @@
+spring: 
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://www.sportworldco.com:3306/rouletteTest?serverTimezone=UTC
+    username: n6cavfpn8433
+    password: Quindi@0215
